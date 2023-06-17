@@ -5,7 +5,7 @@ import { FaCheck } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
 import AmountButtons from './AmountButtons'
 
-const AddToCart = () => {
+const AddToCart = ({ product }) => {
     
     const { addToCart } = useCartContext()
     const { id, stock, colors } = product
