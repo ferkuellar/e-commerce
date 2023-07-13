@@ -115,4 +115,4 @@ const Wrapper = styled.section`
         width: 140px;
     }
 `
-export default AddToCart
+export default AddToCart;
