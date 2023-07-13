@@ -13,6 +13,7 @@ import {
   AuthWrapper,
 } from './pages';
 function App() {
+  console.log("App rendering");
   return (
     <AuthWrapper>
       <Router>
@@ -20,12 +21,12 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='cart' element={<Cart />} />
-          <Route path='products' element={<Products />} />
-          <Route path='products/:id' element={<SingleProduct />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/products/:id' element={<SingleProduct />} />
           <Route
-            path='checkout'
+            path='/checkout'
             element={
               <PrivateRoute>
                 <Checkout />
@@ -41,3 +42,4 @@ function App() {
 }
 
 export default App;
+

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { PageHero } from '../components'
 import aboutImg from '../assets/hero-bcg.jpeg'
-
 const AboutPage = () => {
   return (
     <main>
@@ -31,7 +30,6 @@ const AboutPage = () => {
     </main>
   )
 }
-
 const Wrapper = styled.section`
   display: grid;
   gap: 4rem;
