@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ferkuellar.github.io/e-commerce",
   "name": "comfy",
   "version": "0.1.0",
   "private": true,
@@ -23,17 +24,22 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set CI= react-scripts build",
+    "build": "set CI=true && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "netlify dev"
-    
+    "dev": "netlify dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "warn"
+    }
+    
   },
   "browserslist": {
     "production": [
@@ -49,6 +55,9 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "gh-pages": "^6.0.0",
     "netlify-cli": "^12.1.0"
   }
 }
+
+
